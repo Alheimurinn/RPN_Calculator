@@ -24,8 +24,8 @@ public class RPN_Calculator {
         
         	answer = compute.getResult();
         
-        	System.out.println("The RPN form of your equation is: " + rpnForm + "\n");
-        	//System.out.println("The result of your equation is: " + answer);
+        	System.out.println("The RPN form of your equation is: " + rpnForm);
+        	System.out.println("The result of your equation is: " + answer);
 
 	}
 }
