@@ -1,7 +1,7 @@
 public class rpnAlgorithm {
 	private Stack<Integer> stack;
 	private String input;
-//	private int result;
+	private int result;
 
 	public rpnAlgorithm(String str) {
 		this.input = str;
@@ -39,6 +39,18 @@ public class rpnAlgorithm {
 	}
 	
 	public int getResult(){
-		return 0;
+		char[] charAry = input.toCharArray();
+		for(int i=0; i < charAry.length; i++){
+			String temp = Character.toString(charAry[i]);
+			if(isInt(temp)){
+				int addInt = Integer.parseInt(temp);
+				stack.push(addInt);
+			}else{
+				//compute previous 2 operands with operator
+				//push the result back into stack
+			}
+		}
+		result = stack.pop();
+		return result;
 	}
 }
