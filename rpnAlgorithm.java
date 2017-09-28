@@ -10,7 +10,7 @@ public class rpnAlgorithm {
 	}
 
 	//check if the string is an int
-/*	public static boolean isInt(String str) {
+	public static boolean isInt(String str) {
 		if(str == null) {
 			return false;
 		}
@@ -33,7 +33,10 @@ public class rpnAlgorithm {
 		}
 		return true;
 	}
-*/
+	
+	public void isOperator(){
+		
+	}
 	
 	public int getResult(){
 		return 0;
