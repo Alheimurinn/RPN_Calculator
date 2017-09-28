@@ -13,31 +13,31 @@ public class RPN_Calculator {
 		
 		System.out.println("Please enter your equation: ");
 
-        inputStr = input.nextLine();
+        	inputStr = input.nextLine();
         
-        input.close();
+        	input.close();
         
-        inToPost convert = new inToPost(inputStr);
+        	inToPost convert = new inToPost(inputStr);
         
-        rpnForm = convert.tranEquation();
+        	rpnForm = convert.tranEquation();
         
-        rpnAlgorithm compute = new rpnAlgorithm(rpnForm);
+        	rpnAlgorithm compute = new rpnAlgorithm(rpnForm);
         
-        answer = compute.getResult();
+        	answer = compute.getResult();
 
         
- /*       //convert input string to char[]
-        char[] charArray = inputStr.toCharArray();
+ /*       	//convert input string to char[]
+        	char[] charArray = inputStr.toCharArray();
         
-        //convert each char back to string, and store in string linkedlist
-        for(int i=0; i < charArray.length; i++) {
+        	//convert each char back to string, and store in string linkedlist
+        	for(int i=0; i < charArray.length; i++) {
         	String temp = Character.toString(charArray[i]);
         	formula.add(temp);
-        }     
+        	}     
 */
         
-        System.out.println("The RPN form of your equation is: " + rpnForm + "\n");
-        //System.out.println("The result of your equation is: " + answer);
+        	System.out.println("The RPN form of your equation is: " + rpnForm + "\n");
+        	//System.out.println("The result of your equation is: " + answer);
 
 	}
 }
