@@ -49,7 +49,7 @@ public class rpnAlgorithm {
 		case "-": 
 			op1 = stack.pop();
 			op2 = stack.pop();
-			tempResult = op1 - op2;
+			tempResult = op2 - op1;
 			stack.push(tempResult);
 			break;
 		case "*": 
