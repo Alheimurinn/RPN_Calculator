@@ -7,7 +7,7 @@ public class RPN_Calculator {
 		Scanner input = new Scanner(System.in);
 		String inputStr;
 		String rpnForm;
-		Double answer;
+		double answer;
 
 		while(true) {
 			System.out.println("Please enter your equation OR press q to quit: ");

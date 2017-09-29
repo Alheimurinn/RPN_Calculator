@@ -1,9 +1,9 @@
 public class rpnAlgorithm {
 	private Stack<Double> stack;
 	private String input;
-	private Double result;
-	private Double op1;
-	private Double op2;
+	private double result;
+	private double op1;
+	private double op2;
 
 	public rpnAlgorithm(String str) {
 		this.input = str;
@@ -11,7 +11,7 @@ public class rpnAlgorithm {
 		this.stack = new Stack<Double>(size);
 	}
 
-	//check if the string is an int
+	//check if the string is an Integer
 	public static boolean isInt(String str) {
 		if(str == null) {
 			return false;
@@ -38,7 +38,7 @@ public class rpnAlgorithm {
 
 	//Determine which operator should be used
 	public void checkOperator(String str){
-		Double tempResult;
+		double tempResult;
 		switch(str){
 		case "+": 
 			op1 = stack.pop();
@@ -64,13 +64,12 @@ public class rpnAlgorithm {
 			tempResult = op2 / op1;
 			stack.push(tempResult);
 			break;
-		/*case "^": 
+		case "^": 
 			op1 = stack.pop();
 			op2 = stack.pop();
-			tempResult = op1 ^ op2;
+			tempResult = Math.pow(op1, op2);
 			stack.push(tempResult);
 			break;
-			 */
 		}
 	}
 
@@ -85,7 +84,7 @@ public class rpnAlgorithm {
 
 			//check if current string is an integer, if so, add into the stack
 			if(isInt(temp)){
-				Double addInt = Double.parseDouble(temp);
+				double addInt = Double.parseDouble(temp);
 				stack.push(addInt);
 			}else{
 				//compute previous 2 operands with operator
