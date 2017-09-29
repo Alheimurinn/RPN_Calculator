@@ -35,7 +35,7 @@ public class rpnAlgorithm {
 		}
 		return true;
 	}
-	
+
 	//Determine which operator should be used
 	public void checkOperator(String str){
 		Double tempResult;
@@ -61,7 +61,7 @@ public class rpnAlgorithm {
 		case "/": 
 			op1 = stack.pop();
 			op2 = stack.pop();
-			tempResult = op2/op1;
+			tempResult = op2 / op1;
 			stack.push(tempResult);
 			break;
 		/*case "^": 
@@ -70,19 +70,19 @@ public class rpnAlgorithm {
 			tempResult = op1 ^ op2;
 			stack.push(tempResult);
 			break;
-			*/
+			 */
 		}
 	}
-	
+
 	public Double getResult(){
-		
+
 		//add each char in string into a char array
 		char[] charAry = input.toCharArray();
-		
+
 		//convert char back to string
 		for(int i=0; i < charAry.length; i++){
 			String temp = Character.toString(charAry[i]);
-			
+
 			//check if current string is an integer, if so, add into the stack
 			if(isInt(temp)){
 				Double addInt = Double.parseDouble(temp);
