@@ -8,7 +8,7 @@ public class RPN_Calculator {
 		
 		String inputStr;
 		String rpnForm;
-		int answer;
+		Double answer;
 		
 		System.out.println("Please enter your equation: ");
 
