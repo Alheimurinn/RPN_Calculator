@@ -28,7 +28,6 @@ public class RPN_Calculator {
 				System.out.println("The result of your equation is: " + answer);
 				System.out.println();
 			}
-
 		}
 	}
 }

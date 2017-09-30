@@ -67,12 +67,13 @@ public class rpnAlgorithm {
 		case "^": 
 			op1 = stack.pop();
 			op2 = stack.pop();
-			tempResult = Math.pow(op1, op2);
+			tempResult = Math.pow(op2, op1);
 			stack.push(tempResult);
 			break;
 		}
 	}
 
+	//Using SHunting-yard Algorithm to compute result
 	public Double getResult(){
 
 		//add each char in string into a char array
@@ -81,7 +82,7 @@ public class rpnAlgorithm {
 		//convert char back to string
 		for(int i=0; i < charAry.length; i++){
 			String temp = Character.toString(charAry[i]);
-
+			
 			//check if current string is an integer, if so, add into the stack
 			if(isInt(temp)){
 				double addInt = Double.parseDouble(temp);
