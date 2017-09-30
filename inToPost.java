@@ -20,9 +20,11 @@ public class inToPost {
 				break; 
 			case '*': 
 			case '/':
-			case '^':
 				gotOper(ch, 2); 
-				break; 
+				break;
+			case '^':
+				gotOper(ch,3);
+				break;
 			case '(': 
 				stack.push(ch);
 				break;
@@ -48,10 +50,13 @@ public class inToPost {
 				break;
 			} else {
 				int prec2;
-				if (opTop == '+' || opTop == '-')
+				if (opTop == '+' || opTop == '-') {
 					prec2 = 1;
-				else
+				}else if(opTop == '*' || opTop == '/'){
 					prec2 = 2;
+				}else {
+					prec2 = 3;
+				}
 				if (prec2 < prec1) { 
 					stack.push(opTop);
 					break;
