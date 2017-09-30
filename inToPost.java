@@ -23,7 +23,7 @@ public class inToPost {
 				gotOper(ch, 2); 
 				break;
 			case '^':
-				gotOper(ch,3);
+				gotOper(ch, 3);
 				break;
 			case '(': 
 				stack.push(ch);
